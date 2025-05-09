@@ -1,0 +1,92 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- 239 Trends: Homepage v1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>239 Trends - Regional Music Discovery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>239 Trends - Regional Music Discovery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @keyframes marquee {
+        0% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      .animate-marquee {
+        display: inline-block;
+        animation: marquee 25s linear infinite;
+      }
+    </style>
+  </head>
+
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- 🔥 What's Trending? -->
+
+  <!-- 🚨 Trending Genres Ticker -->
+  <div class="w-full overflow-hidden bg-black py-2">
+    <div class="animate-marquee whitespace-nowrap text-white text-sm font-semibold flex gap-12 px-4">
+      <span>🔥 Trap</span>
+      <span>🎤 R&B</span>
+      <span>🎶 Melodic</span>
+      <span>🎻 Classical Trap (Yes, it’s a thing twin)</span>
+    </div>
+  </div>
+
+  <section class="text-center py-16 bg-white shadow-md">
+    <h1 class="text-3xl font-extrabold">239 Distro HQ</h1>
+    <p class="text-lg mt-6 text-gray-600">
+      Discover who’s moving culture by the city, the genre, or the streets.
+    </p>
+    <div class="mt-7 space-x-4">
+      <button class="bg-black text-white px-4 py-2 rounded-xl">
+        Search Artist
+      </button>
+      <button class="border border-black text-black px-4 py-2 rounded-xl">
+        Explore Dashboard
+      </button>
+    </div>
+  </section>
+
+  <!-- 📊 Featured Stats -->
+  <section class="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8">
+    <div class="bg-white rounded-xl p-4 shadow text-center">
+      <h2 class="text-xl font-semibold"> Top Artist</h2>
+      <p class="text-lg font-medium">Young Thug</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 shadow text-center">
+      <h2 class="text-xl font-semibold"> Top Genre</h2>
+      <p class="text-lg font-medium">Trap</p>
+    </div>
+    <div class="bg-white rounded-xl p-4 shadow text-center">
+      <h2 class="text-xl font-semibold"> Top City</h2>
+      <p class="text-lg font-medium">Atlanta, GA</p>
+    </div>
+  </section>
+
+  <!-- 📎 Footer -->
+  <footer class="text-center py-6 text-sm text-gray-500">
+    Powered by <strong>239 Distro</strong> • Built with Python, Tableau, React
+  </footer>
+
+</body>
+
+</html>
