@@ -1,23 +1,5 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>239 Distro HQ – Under Construction</title>
-  <script>
-    function checkPassword() {
-      const input = document.getElementById("pw").value;
-      if (input === "239plairs") {
-        window.location.href = "main.html"; // change this later to your real file
-      } else {
-        alert("❌ Incorrect password. Try again.");
-      }
-    }
-  </script>
-</head>
-<body style="text-align:center; padding-top:100px; font-family: sans-serif; background-color: #111; color: #fff;">
-  <h1>🚧 239 Distro HQ is Under Construction 🚧</h1>
-  <p style="margin-bottom: 20px;">Enter password to access the preview:</p>
- <input
+<!-- Password Input + Button -->
+<input
   type="password"
   id="pw"
   placeholder="Enter access code"
@@ -29,6 +11,28 @@
   Unlock
 </button>
 
-  <script src="assets/scripts/construction.js"></script>
-</body>
-</html>
+<!-- ✅ Script at bottom -->
+<script>
+  function checkPassword() {
+    const input = document.getElementById("pw").value;
+    if (input === "239plairs") {
+      window.location.href = "main.html";
+    } else {
+      alert("❌ Incorrect password. Try again.");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const pwInput = document.getElementById("pw");
+    const unlockBtn = document.getElementById("unlockBtn");
+
+    unlockBtn.addEventListener("click", checkPassword);
+
+    pwInput.addEventListener("keypress", function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        unlockBtn.click();
+      }
+    });
+  });
+</script>
