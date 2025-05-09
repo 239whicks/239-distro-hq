@@ -38,7 +38,8 @@ Welcome to the frontend repository for **239 Distro HQ**, a regional music trend
 ├── style.css          # (Optional, used if you're writing custom styles)
 ├── scripts.js         # (Optional, future JS functionality)
 └── README.md          # You here right now :)
-
+---
+```
 📦 Patch Notes / Updates
 🛠 v1.1 – May 2025
 🔐 Introduced a password-protected construction page to gate site preview
