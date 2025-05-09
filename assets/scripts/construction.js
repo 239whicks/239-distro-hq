@@ -1,18 +1,19 @@
-// Function to check password
-function checkPassword() {
-  const input = document.getElementById("myInput").value;
-  if (input === "239plairs") {
-    window.location.href = "main.html"; // change to whatever file you're redirecting to
-  } else {
-    alert("❌ Incorrect password. Try again.");
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menuBtn");
+  const closeBtn = document.getElementById("closeBtn");
+  const sidebar = document.getElementById("sidebar");
 
-// Allow pressing Enter to trigger the button
-var input = document.getElementById("myInput");
-input.addEventListener("keypress", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("myBtn").click();
-  }
+  menuBtn.addEventListener("click", () => {
+    sidebar.classList.add("open");
+  });
+
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+  });
+
+  window.addEventListener("scroll", () => {
+    if (sidebar.classList.contains("open")) {
+      sidebar.classList.remove("open");
+    }
+  });
 });
