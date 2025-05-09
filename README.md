@@ -38,3 +38,21 @@ Welcome to the frontend repository for **239 Distro HQ**, a regional music trend
 ├── style.css          # (Optional, used if you're writing custom styles)
 ├── scripts.js         # (Optional, future JS functionality)
 └── README.md          # You here right now :)
+
+📦 Patch Notes / Updates
+🛠 v1.1 – May 2025
+🔐 Introduced a password-protected construction page to gate site preview
+
+💡 Implemented Enter key support for the password input field
+
+🔁 Refactored JavaScript logic into an external file: construction.js
+
+🧱 Renamed index.html → main.html to separate homepage logic
+
+🚪 Set construction.html → index.html as the new public entry point
+
+🌐 Successfully deployed site through Vercel with live domain-ready setup
+
+🧼 Restructured GitHub repo for modular expansion (assets/, scripts/)
+
+🎯 Locked in smooth redirect flow from password screen to homepage on valid entry
