@@ -1,38 +1,42 @@
-<!-- Password Input + Button -->
-<input
-  type="password"
-  id="pw"
-  placeholder="Enter access code"
-  style="padding: 10px; border-radius: 6px; border: none;" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>239 Distro HQ – Under Construction</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body style="text-align:center; padding-top:100px; font-family: sans-serif; background-color: #111; color: #fff;">
 
-<button
-  id="unlockBtn"
-  style="padding: 10px 15px; margin-left: 10px; border-radius: 6px; border: none; background-color: #23d997; color: #000;">
-  Unlock
-</button>
+  <h1>🚧 239 Distro HQ is Under Construction 🚧</h1>
+  <p style="margin-bottom: 20px;">Enter password to access the preview:</p>
 
-<!-- ✅ Script at bottom -->
-<script>
-  function checkPassword() {
-    const input = document.getElementById("pw").value;
-    if (input === "239plairs") {
-      window.location.href = "main.html";
-    } else {
-      alert("❌ Incorrect password. Try again.");
-    }
-  }
+  <input type="password" id="pw" placeholder="Enter access code" style="padding: 10px; border-radius: 6px; border: none;" />
+  <button id="unlockBtn" style="padding: 10px 15px; margin-left: 10px; border-radius: 6px; border: none; background-color: #23d997; color: #000;">Unlock</button>
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const pwInput = document.getElementById("pw");
-    const unlockBtn = document.getElementById("unlockBtn");
-
-    unlockBtn.addEventListener("click", checkPassword);
-
-    pwInput.addEventListener("keypress", function (event) {
-      if (event.key === "Enter") {
-        event.preventDefault();
-        unlockBtn.click();
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("pw").value;
+      if (input === "239plairs") {
+        window.location.href = "main.html";
+      } else {
+        alert("❌ Incorrect password. Try again.");
       }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const pwInput = document.getElementById("pw");
+      const unlockBtn = document.getElementById("unlockBtn");
+
+      unlockBtn.addEventListener("click", checkPassword);
+
+      pwInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          unlockBtn.click();
+        }
+      });
     });
-  });
-</script>
+  </script>
+
+</body>
+</html>
