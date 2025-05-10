@@ -7,7 +7,7 @@ Welcome to the frontend repository for **239 Distro HQ**, a regional music trend
 ---
 
 ## 🌐 Live Preview
-🌐 Live Site: [https://239distro.com] (https://239distro.com) *(auto-updates on commit)*
+🌐 Live Site: [https://239distro.com] (https://239distro.com)
 
 ---
 
