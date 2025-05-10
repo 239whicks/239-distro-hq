@@ -9,19 +9,51 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- ✅ Your custom stylesheet -->
-  <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/styles/style.css" />
 
   <!-- ✅ Optional JavaScript for menu, sidebar, etc. -->
-  <script src="../assets/scripts.js" defer></script>
+  <script src="../assets/scripts/construction.js" defer></script>
 
   <!-- ✅ Optional: Favicon (if you have one) -->
   <!-- <link rel="icon" type="image/png" href="../assets/favicon.png" /> -->
 </head>
 
-<body class="bg-white text-black flex flex-col items-center justify-center h-screen">
-  <h1 class="text-4xl font-bold mb-4">Explore</h1>
-  <p class="text-lg text-gray-600 text-center max-w-xl">
-    This will showcase underground headlines, release reports, and cultural updates powered by 239 Distro HQ.
-  </p>
+<body class="bg-white text-black min-h-screen">
+
+  <!-- NAV CONTAINER -->
+  <nav class="flex justify-between items-center p-4 bg-white text-black shadow-md">
+    <div></div>
+    <button id="menuBtn" class="flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+      <span class="w-6 h-0.5 bg-black"></span>
+    </button>
+  </nav>
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="sidebar">
+    <button id="closeBtn" class="absolute top-4 right-4 text-2xl font-bold text-white">&times;</button>
+
+    <ul id="menuLinks" class="mt-6 space-y-4 text-lg font-medium text-center">
+      <li><a href="/releases" class="hover:underline">New Releases</a></li>
+      <li><a href="/explore" class="hover:underline">Explore Trends</a></li>
+      <li><a href="/news" class="hover:underline">News</a></li>
+      <li><a href="/about" class="hover:underline">About</a></li>
+      <li><a href="/contact" class="hover:underline">Contact</a></li>
+    </ul>
+
+    <div class="absolute bottom-4 left-6 right-6 text-xs text-white/40 text-center">
+      &copy; 2025 · Powered by <strong>239 Distro</strong> · Built for the culture.
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <section class="flex flex-col items-center justify-center text-center py-20 px-4">
+    <h1 class="text-4xl font-bold mb-4">Explore</h1>
+    <p class="text-lg text-gray-600 max-w-xl">
+      This will showcase underground headlines, release reports, and cultural updates powered by 239 Distro HQ.
+    </p>
+  </section>
+
 </body>
 </html>
