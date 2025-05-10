@@ -6,6 +6,8 @@
   <title>239 Trends - Regional Music Discovery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script src="assets/construction.js" defer></script>
 </head>
 
 <body class="bg-gray-100 text-gray-900">
@@ -83,27 +85,6 @@
     Powered by <strong>239 Distro</strong> • Built with Python, Tableau, React
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuBtn = document.getElementById("menuBtn");
-      const closeBtn = document.getElementById("closeBtn");
-      const sidebar = document.getElementById("sidebar");
-
-      menuBtn.addEventListener("click", () => {
-        sidebar.classList.add("open");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        sidebar.classList.remove("open");
-      });
-
-      window.addEventListener("scroll", () => {
-        if (sidebar.classList.contains("open")) {
-          sidebar.classList.remove("open");
-        }
-      });
-    });
-  </script>
 
 </body>
 </html>
