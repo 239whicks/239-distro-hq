@@ -37,3 +37,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const featuredContainer = document.getElementById("featuredNews");
+
+  try {
+    const response = await fetch("/content/posts.json");
+    const data = await response.json();
+    const featuredPost = data.posts.find(post => post.featured);
+
+    if (featuredPost && featuredContainer) {
+      featuredContainer.innerHTML = `
+        <div class="bg-white rounded-xl shadow p-4">
+          <img src="${featuredPost.image}" alt="${featuredPost.title}" class="rounded-md mb-4" />
+          <h3 class="text-2xl font-bold mb-1">${featuredPost.title}</h3>
+          <p class="text-sm text-gray-500 mb-2">By ${featuredPost.author} • ${featuredPost.date}</p>
+          <p class="text-gray-700 text-sm mb-3">${featuredPost.summary}</p>
+          <a href="/news/${featuredPost.slug}" class="text-sm text-black font-semibold hover:underline">Read More</a>
+        </div>
+      `;
+    }
+  } catch (err) {
+    console.error("Error loading featured post:", err);
+  }
+});
