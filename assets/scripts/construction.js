@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.getElementById("closeBtn");
   const sidebar = document.getElementById("sidebar");
   const homeLink = document.getElementById("homeLink");
+  const navLinks = document.querySelectorAll("#menuLinks a");
 
   menuBtn.addEventListener("click", () => {
     sidebar.classList.add("open");
@@ -28,14 +29,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
 
-// Auto-close sidebar when any nav link is clicked (except Home logic handled separately)
-const navLinks = document.querySelectorAll("#menuLinks a");
-
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    sidebar.classList.remove("open");
+  // ✅ Auto-close on all other nav links
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+    });
   });
 });
-
