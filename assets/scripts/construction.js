@@ -29,3 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Auto-close sidebar when any nav link is clicked (except Home logic handled separately)
+const navLinks = document.querySelectorAll("#menuLinks a");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+  });
+});
+
