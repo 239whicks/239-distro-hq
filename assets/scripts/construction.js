@@ -47,15 +47,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     const featuredPost = data.posts.find(post => post.featured);
 
     if (featuredPost && featuredContainer) {
-      featuredContainer.innerHTML = `
-        <div class="bg-white rounded-xl shadow p-4">
-          <img src="${featuredPost.image}" alt="${featuredPost.title}" class="rounded-md mb-4" />
-          <h3 class="text-2xl font-bold mb-1">${featuredPost.title}</h3>
-          <p class="text-sm text-gray-500 mb-2">By ${featuredPost.author} • ${featuredPost.date}</p>
-          <p class="text-gray-700 text-sm mb-3">${featuredPost.summary}</p>
-          <a href="/news/${featuredPost.slug}" class="text-sm text-black font-semibold hover:underline">Read More</a>
-        </div>
-      `;
+featuredContainer.innerHTML = `
+  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-6 flex flex-col sm:flex-row gap-6 items-center">
+    <img src="${featuredPost.image}" alt="${featuredPost.title}" class="w-full sm:w-1/3 rounded-lg object-cover" />
+    <div class="flex flex-col justify-between sm:w-2/3">
+      <h3 class="text-2xl font-bold mb-2">${featuredPost.title}</h3>
+      <p class="text-sm text-gray-500 mb-1">By ${featuredPost.author} • ${featuredPost.date}</p>
+      <p class="text-gray-700 text-sm mb-3 line-clamp-3">${featuredPost.summary}</p>
+      <a href="/news/${featuredPost.slug}" class="text-sm text-black font-semibold hover:underline">Read More →</a>
+    </div>
+  </div>
+`;
+
     }
   } catch (err) {
     console.error("Error loading featured post:", err);
