@@ -45,4 +45,32 @@ A public changelog documenting major updates, fixes, and feature rollouts to the
 
 ---
 
-Stay tuned for `v0.2` — we’re just getting started.
+## 🧱 v0.1.2
+
+### ✅ Core Website Updates
+- **Global Menu Bar**:  
+  Menu is now implemented across all pages, including correct alignment, consistent placement, and working sidebar functionality.
+
+- **Navigation Fixes**:  
+  - Menu "Home" link now closes sidebar if already on the homepage.  
+  - Verified `vercel.json` rewrites work for clean URLs (e.g., `/news`, `/contact`, etc.).
+
+- **Search Bar Added**:  
+  Homepage now features a styled, functional (visual only for now) search input in top-left corner.  
+  - Appears as just a magnifying glass on subpages.
+
+- **Page Clean-Up**:  
+  - Each HTML page reviewed, marquee removed from subpages.  
+  - Menu button no longer breaks layout.  
+  - Proper spacing restored between search and menu button.  
+  - All `.html` files removed from URLs.
+
+---
+
+### 📬 Email Setup + Branding
+- **Custom Email Configured**:  
+  Created and verified `contact@239distro.com` through Zoho Mail using Vercel domain DNS records (MX, SPF, DKIM, etc.).
+
+- **Zoho Email Signature**:  
+  Clean signature finalized for all emails:
+
