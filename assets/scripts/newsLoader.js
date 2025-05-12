@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch(`/posts/${postSlug}.md`);
+    const response = await fetch('/news/step-brothers-4.md');
     if (!response.ok) throw new Error("File not found");
 
     const markdown = await response.text();
