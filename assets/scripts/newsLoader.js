@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   try {
-    const response = await fetch(`/news/${slug}.md`);
+    const response = await fetch(`/content/news/${slug}.md`);
     if (!response.ok) throw new Error("File not found");
 
     const markdown = await response.text();
@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     container.innerHTML = html;
   } catch (err) {
-    container.innerHTML = `<p class='text-center text-red-500'>Could not load article. Make sure the file exists in /content/news/.</p>`;
+    container.innerHTML = `<p class='text-center text-red-500'>Could not load article. Make sure the file exists in /public/content/news/.</p>`;
   }
 });
