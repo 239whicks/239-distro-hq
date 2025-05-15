@@ -1,0 +1,23 @@
+{
+  "name": "239-distro-hq",
+  "version": "1.0.0",
+  "description": "Welcome to the frontend repository for **239 Distro HQ**, a regional music trends platform powered by live Spotify data, artist insights, and real-time visualizations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/239whicks/239-distro-hq.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/239whicks/239-distro-hq/issues"
+  },
+  "homepage": "https://github.com/239whicks/239-distro-hq#readme",
+  "devDependencies": {
+    "tailwindcss": "^4.1.6"
+  }
+}
