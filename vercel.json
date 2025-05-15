@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/", "destination": "/main.html" },
     { "source": "/news", "destination": "/pages/news.html" },
+    { "source": "/news/:slug", "destination": "/pages/news.html"}
     { "source": "/releases", "destination": "/pages/releases.html" },
     { "source": "/explore", "destination": "/pages/explore.html" },
     { "source": "/about", "destination": "/pages/about.html" },
