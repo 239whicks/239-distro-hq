@@ -4,20 +4,41 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>News | 239 Distro HQ</title>
+
+  <!-- ✅ Your local Tailwind + custom theme CSS -->
   <link rel="stylesheet" href="/public/style.css">
-  <script src="/assets/scripts/construction.js" defer></script>
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+  <!-- ✅ Sidebar/featured logic -->
+  <script src="../assets/scripts/construction.js" defer></script>
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
 </head>
 
 <body class="bg-sand text-black min-h-screen">
-  <!-- NAV CONTAINER -->
-  <nav class="flex justify-between items-center p-4 bg-sand text-black shadow-md">
-    <button class="text-black hover:text-silver">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
-        <path fill-rule="evenodd" d="M8 4a4 4 0 014 4c0 .93-.317 1.78-.84 2.45l4.13 4.12a1 1 0 01-1.42 1.42l-4.12-4.13A4 4 0 118 4zm0 2a2 2 0 100 4 2 2 0 000-4z" clip-rule="evenodd" />
-      </svg>
-    </button>
 
+  <!-- 🔥 Trending Genres Ticker -->
+  <div class="w-full overflow-hidden bg-black text-accent py-2">
+    <div class="animate-marquee whitespace-nowrap text-sm font-semibold flex divide-x divide-white/20 px-4">
+      <span class="px-4">🔥 Trap</span>
+      <span class="px-4">🎤 R&B</span>
+      <span class="px-4">🎶 Melodic</span>
+      <span class="px-4">🏋️ Classical Trap</span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="flex justify-between items-center p-4 bg-sand text-black shadow">
+    <!-- Search Icon -->
+    <div>
+      <button class="text-black hover:text-accent">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M8 4a4 4 0 014 4c0 .93-.317 1.78-.84 2.45l4.13 4.12a1 1 0 01-1.42 1.42l-4.12-4.13A4 4 0 118 4zm0 2a2 2 0 100 4 2 2 0 000-4z" clip-rule="evenodd" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Toggle -->
     <button id="menuBtn" class="flex flex-col space-y-1">
       <span class="w-6 h-0.5 bg-accent"></span>
       <span class="w-6 h-0.5 bg-accent"></span>
@@ -28,6 +49,7 @@
   <!-- SIDEBAR -->
   <div id="sidebar" class="sidebar bg-primary">
     <button id="closeBtn" class="absolute top-4 right-4 text-2xl font-bold text-white">&times;</button>
+
     <ul id="menuLinks" class="mt-6 space-y-4 text-lg font-medium text-center">
       <li><a href="/main.html" class="hover:text-accent" id="homeLink">Home</a></li>
       <li><a href="/releases" class="hover:text-accent">New Releases</a></li>
@@ -36,27 +58,30 @@
       <li><a href="/about" class="hover:text-accent">About</a></li>
       <li><a href="/contact" class="hover:text-accent">Contact</a></li>
     </ul>
+
     <div class="absolute bottom-4 left-6 right-6 text-xs text-white/40 text-center">
       &copy; 2025 · Powered by <strong>239 Distro</strong> · Built for the culture.
     </div>
   </div>
 
-  <!-- MAIN CONTENT -->
-  <section class="flex flex-col items-center justify-center text-center py-20 px-4">
-    <h1 class="text-4xl font-bold mb-4 text-primary">News</h1>
-    <p class="text-lg text-silver max-w-xl">
+  <!-- PAGE TITLE -->
+  <section class="text-center py-16 px-6">
+    <h1 class="text-5xl font-extrabold text-primary mb-4">News</h1>
+    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
       This will showcase underground headlines, release reports, and cultural updates powered by 239 Distro HQ.
     </p>
   </section>
 
-  <!-- Article container -->
+  <!-- CONTENT AREA -->
   <div id="newsContainer" class="max-w-3xl mx-auto px-6 pb-20"></div>
+
   <main id="articleContent" class="max-w-3xl mx-auto px-4 py-10 text-left">
-    <p class="text-center text-silver">Loading article...</p>
+    <p class="text-center text-gray-500">Loading article...</p>
   </main>
 
-  <!-- Markdown Parser & Loader -->
+  <!-- MARKDOWN LOADER -->
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="/assets/scripts/newsLoader.js"></script>
+  <script src="../assets/scripts/newsLoader.js"></script>
+
 </body>
 </html>
