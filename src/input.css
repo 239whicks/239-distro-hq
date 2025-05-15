@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ========== UNIVERSAL THEME VARIABLES ========== */
+:root {
+  --color-accent: #C64D14;   /* Bold orange */
+  --color-muted: #888C8A;    /* Neutral gray */
+  --color-dark: #212B2B;     /* Onyx base */
+  --color-primary: #2D4652;  /* Slate blue/green */
+  --color-cream: #D2B078;    /* Warm wheat */
+}
+
 /* ========== CUSTOM CSS BELOW ========== */
 
 @keyframes marquee {
@@ -21,7 +30,7 @@
   height: 100%;
   width: 60%;
   max-width: 400px;
-  background-color: #000;
+  background-color: var(--color-dark);
   color: white;
   padding: 1.5rem;
   z-index: 50;
