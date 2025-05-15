@@ -19,50 +19,43 @@
 
 </head>
 
-<body class="bg-white text-black min-h-screen">
-
-  <!-- NAV CONTAINER -->
-  <nav class="flex justify-between items-center p-4 bg-white text-black shadow-md">
-    <!-- Search Icon (internal pages only) -->
-<div>
-  <button class="text-black hover:text-gray-700">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 sm:h-6 sm:w-6" viewBox="0 0 20 20" fill="currentColor">
-      <path fill-rule="evenodd" d="M8 4a4 4 0 014 4c0 .93-.317 1.78-.84 2.45l4.13 4.12a1 1 0 01-1.42 1.42l-4.12-4.13A4 4 0 118 4zm0 2a2 2 0 100 4 2 2 0 000-4z" clip-rule="evenodd" />
-    </svg>
-  </button>
-</div>
-    <button id="menuBtn" class="flex flex-col space-y-1">
-      <span class="w-6 h-0.5 bg-black"></span>
-      <span class="w-6 h-0.5 bg-black"></span>
-      <span class="w-6 h-0.5 bg-black"></span>
-    </button>
-  </nav>
-
-  <!-- SIDEBAR -->
-  <div id="sidebar" class="sidebar">
-    <button id="closeBtn" class="absolute top-4 right-4 text-2xl font-bold text-white">&times;</button>
-
-    <ul id="menuLinks" class="mt-6 space-y-4 text-lg font-medium text-center">
-      <li><a href="/main.html" class="hover:underline">Home</a></li>
-      <li><a href="/releases" class="hover:underline">New Releases</a></li>
-      <li><a href="/explore" class="hover:underline">Explore Trends</a></li>
-      <li><a href="/news" class="hover:underline">News</a></li>
-      <li><a href="/about" class="hover:underline">About</a></li>
-      <li><a href="/contact" class="hover:underline">Contact</a></li>
-    </ul>
-
-    <div class="absolute bottom-4 left-6 right-6 text-xs text-white/40 text-center">
-      &copy; 2025 · Powered by <strong>239 Distro</strong> · Built for the culture.
+<body class="bg-cream text-black">
+  <!-- HEADER -->
+  <div class="flex justify-between items-center p-4 bg-black text-accent">
+    <div class="flex items-center space-x-2">
+      <svg class="w-5 h-5 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="..." /></svg>
+      <input
+        type="text"
+        placeholder="Search..."
+        class="bg-black text-white placeholder:text-accent px-3 py-1 rounded-md border border-gold text-sm"
+      />
     </div>
   </div>
 
+  <!-- SIDEBAR OR NAV -->
+  <div class="text-center mt-6">
+    <ul class="space-y-2 text-lg font-semibold">
+      <li><a href="/main.html" class="hover:text-accent">Home</a></li>
+      <li><a href="/releases" class="text-accent underline">New Releases</a></li>
+      <li><a href="/explore" class="hover:text-accent">Explore Trends</a></li>
+      <li><a href="/news" class="hover:text-accent">News</a></li>
+      <li><a href="/about" class="hover:text-accent">About</a></li>
+      <li><a href="/contact" class="hover:text-accent">Contact</a></li>
+    </ul>
+  </div>
+
   <!-- MAIN CONTENT -->
-  <section class="flex flex-col items-center justify-center text-center py-20 px-4">
-    <h1 class="text-4xl font-bold mb-4">New Releases</h1>
-    <p class="text-lg text-gray-600 max-w-xl">
+  <section class="text-center py-12 px-4">
+    <h1 class="text-4xl font-extrabold text-primary mb-4">New Releases</h1>
+    <p class="text-gray-700 text-base max-w-xl mx-auto">
       This will showcase underground headlines, release reports, and cultural updates powered by 239 Distro HQ.
     </p>
   </section>
 
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-sm text-black bg-cream border-t border-gold">
+    &copy; 2025 · 239 Distro HQ · Built for the culture
+  </footer>
 </body>
+
 </html>
