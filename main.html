@@ -3,17 +3,17 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>239 Trends - Regional Music Discovery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>239 Trends - Regional Music Discovery</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="public/style.css">
   <script src="assets/scripts/construction.js" defer></script>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" />
 </head>
 
-<body class="bg-cream text-black">
+<body class="bg-[#D2B078] text-[#212B2B]">
   <!-- Trending Genres Ticker -->
-  <div class="w-full overflow-hidden bg-black text-accent py-2">
+  <div class="w-full overflow-hidden bg-[#212B2B] text-[#C64D14] py-2">
     <div class="animate-marquee whitespace-nowrap text-sm font-semibold flex divide-x divide-white/20 px-4">
       <span class="px-4">🔥 Trap</span>
       <span class="px-4">🎤 R&B</span>
@@ -25,24 +25,24 @@
   <!-- NAV CONTAINER -->
   <div class="flex items-center justify-between p-4">
     <input id="searchInput" type="text" placeholder="Search..."
-      class="w-24 transition-all duration-300 focus:w-48 px-3 py-1 rounded-lg border border-gold focus:outline-none focus:ring-2 focus:ring-accent text-sm mr-4" />
+      class="w-24 transition-all duration-300 focus:w-48 px-3 py-1 rounded-lg border border-[#888C8A] focus:outline-none focus:ring-2 focus:ring-[#C64D14] text-sm mr-4" />
     <button id="menuBtn" class="flex flex-col space-y-1">
-      <span class="w-6 h-0.5 bg-accent"></span>
-      <span class="w-6 h-0.5 bg-accent"></span>
-      <span class="w-6 h-0.5 bg-accent"></span>
+      <span class="w-6 h-0.5 bg-[#C64D14]"></span>
+      <span class="w-6 h-0.5 bg-[#C64D14]"></span>
+      <span class="w-6 h-0.5 bg-[#C64D14]"></span>
     </button>
   </div>
 
   <!-- SIDEBAR -->
-  <div id="sidebar" class="sidebar">
+  <div id="sidebar" class="sidebar bg-[#2D4652]">
     <button id="closeBtn" class="absolute top-4 right-4 text-2xl font-bold text-white">&times;</button>
     <ul id="menuLinks" class="mt-6 space-y-4 text-lg font-medium text-center">
-      <li><a href="/main.html" class="hover:text-accent" id="homeLink">Home</a></li>
-      <li><a href="/releases" class="hover:text-accent">New Releases</a></li>
-      <li><a href="/explore" class="hover:text-accent">Explore Trends</a></li>
-      <li><a href="/news" class="hover:text-accent">News</a></li>
-      <li><a href="/about" class="hover:text-accent">About</a></li>
-      <li><a href="/contact" class="hover:text-accent">Contact</a></li>
+      <li><a href="/main.html" class="hover:text-[#C64D14]" id="homeLink">Home</a></li>
+      <li><a href="/releases" class="hover:text-[#C64D14]">New Releases</a></li>
+      <li><a href="/explore" class="hover:text-[#C64D14]">Explore Trends</a></li>
+      <li><a href="/news" class="hover:text-[#C64D14]">News</a></li>
+      <li><a href="/about" class="hover:text-[#C64D14]">About</a></li>
+      <li><a href="/contact" class="hover:text-[#C64D14]">Contact</a></li>
     </ul>
     <div class="absolute bottom-4 left-6 right-6 text-xs text-white/40 text-center">
       &copy; 2025 · Powered by <strong>239 Distro</strong> · Built for the culture.
@@ -51,15 +51,15 @@
 
   <!-- HERO -->
   <section class="text-center py-10 bg-white shadow-md">
-    <h1 class="text-8xl font-extrabold text-primary">239 Distro HQ</h1>
-    <p class="text-lg mt-6 text-gray-600">
+    <h1 class="text-8xl font-extrabold text-[#2D4652]">239 Distro HQ</h1>
+    <p class="text-lg mt-6 text-[#888C8A]">
       Discover who’s moving culture by the city, the genre, or the streets.
     </p>
     <div class="mt-7 space-x-4">
-      <button class="bg-accent text-white px-4 py-2 rounded-xl hover:bg-gold">
+      <button class="bg-[#C64D14] text-white px-4 py-2 rounded-xl hover:bg-[#888C8A]">
         Search Artist
       </button>
-      <button class="border border-accent text-accent px-4 py-2 rounded-xl hover:bg-gold hover:text-white">
+      <button class="border border-[#C64D14] text-[#C64D14] px-4 py-2 rounded-xl hover:bg-[#888C8A] hover:text-white">
         Explore Dashboard
       </button>
     </div>
@@ -67,37 +67,37 @@
 
   <!-- STATS -->
   <section class="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8">
-    <div class="bg-white border border-gold rounded-xl p-4 shadow text-center">
+    <div class="bg-white border border-[#888C8A] rounded-xl p-4 shadow text-center">
       <h2 class="text-xl font-semibold">Top Artist</h2>
       <p class="text-lg font-medium">Young Thug</p>
     </div>
-    <div class="bg-white border border-gold rounded-xl p-4 shadow text-center">
+    <div class="bg-white border border-[#888C8A] rounded-xl p-4 shadow text-center">
       <h2 class="text-xl font-semibold">Top Genre</h2>
       <p class="text-lg font-medium">Trap</p>
     </div>
-    <div class="bg-white border border-gold rounded-xl p-4 shadow text-center">
+    <div class="bg-white border border-[#888C8A] rounded-xl p-4 shadow text-center">
       <h2 class="text-xl font-semibold">Top City</h2>
       <p class="text-lg font-medium">Atlanta, GA</p>
     </div>
   </section>
 
   <!-- FEATURED NEWS -->
-  <section class="px-4 py-10 bg-cream" id="featuredNews">
-    <div class="max-w-4xl mx-auto bg-white border border-gold rounded-xl shadow-md overflow-hidden">
+  <section class="px-4 py-10 bg-[#D2B078]" id="featuredNews">
+    <div class="max-w-4xl mx-auto bg-white border border-[#888C8A] rounded-xl shadow-md overflow-hidden">
       <img src="/assets/images/stepbrothers4.jpg" alt="Step Brothers 4 Cover" class="w-full h-auto" />
       <div class="p-6">
-        <h3 class="text-xl font-bold mb-1 text-primary">Step Brothers 4 is Back</h3>
-        <p class="text-sm text-gray-500 mb-2">By Willie Hicks · 2025-05-11</p>
-        <p class="text-black text-sm mb-4 line-clamp-3">
+        <h3 class="text-xl font-bold mb-1 text-[#2D4652]">Step Brothers 4 is Back</h3>
+        <p class="text-sm text-[#888C8A] mb-2">By Willie Hicks · 2025-05-11</p>
+        <p class="text-[#212B2B] text-sm mb-4 line-clamp-3">
           Starlito and Don Trip dropped a timeless gem. Ain’t no promo, just pressure — and it’s being slept on.
         </p>
-        <a href="/news?slug=step-brothers-4" class="text-accent font-semibold underline hover:text-gold">Read More →</a>
+        <a href="/news?slug=step-brothers-4" class="text-[#C64D14] font-semibold underline hover:text-[#888C8A]">Read More →</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="text-center py-6 text-sm text-black bg-cream">
+  <footer class="text-center py-6 text-sm text-[#212B2B] bg-[#D2B078]">
     Powered by <strong>239 Distro</strong> • Built with Python, Tableau, React
   </footer>
 
