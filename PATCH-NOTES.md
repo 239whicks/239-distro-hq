@@ -74,3 +74,63 @@ A public changelog documenting major updates, fixes, and feature rollouts to the
 - **Zoho Email Signature**:  
   Clean signature finalized for all emails:
 
+---
+
+🛠️ 239 Distro HQ — Patch Notes (May 14, 2025)
+✅ Structural & Routing Enhancements
+✅ Fully migrated to local/Vercel-only file paths for production stability
+✅ Cleaned and reorganized repo into:
+
+/assets → images, scripts, styles
+
+/pages → all routed HTML views
+
+/content/posts/ → news/article data (posts.json, future .md/.txt support)
+
+✅ vercel.json updated with proper rewrites for:
+
+/ → /main.html
+
+/news, /releases, /contact, etc. → routed cleanly to /pages/*.html
+
+🧠 Dynamic News Routing (Slug-Based)
+✅ “Read More” button now dynamically routes using ?slug= pattern:
+
+<a href="/news?slug=step-brothers-4">Read More →</a>
+
+✅ newsLoader.js added to read URL slug and attempt to fetch corresponding .md article
+✅ Markdown parser (Marked.js) installed via CDN and integrated with dynamic rendering
+
+## ⚠️ Known Issue – Markdown Article Load
+❌ Markdown files in /public/posts/ are not loading on Vercel despite correct slug routing
+
+Vercel currently does not serve .md as plain text without MIME override
+
+✅ Confirmed dynamic slug routing is functional — now properly directs to the News page
+
+🧪 Fixes attempted:
+
+.md → .txt (fallback)
+
+newsLoader.js fetch correction
+
+MIME header config in vercel.json
+
+🧩 Final blocker appears to be Vercel’s handling of static files while the construction page is still active
+
+🧼 Housekeeping & Devops
+✅ git add . / git commit -m "Clean structure, proper routing, rewrites locked in" pushed successfully
+
+✅ GitHub repo now reflects the exact working state of the project
+
+✅ No more dependency on MacBook — all development is now done locally and Vercel-native
+
+🧭 Next Steps (Planned)
+🎯 Resolve .md render issue post-construction page
+
+🎨 Begin full theming of the site (colors, seasonal palettes, header/footer polish)
+
+📰 Begin using posts.json for simplified dynamic news listing, fallback if .md fails
+
+💾 Add GitHub README update for new structure + Patch Notes archive
+
