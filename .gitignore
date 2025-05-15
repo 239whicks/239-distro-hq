@@ -1,4 +1,15 @@
+# Dependencies
 node_modules/
+
+# Builds
 dist/
+public/style.css
+
+# Local dev tools
+tailwindcss.exe
+
+# Environment variables
 .env
+
+# macOS system file
 .DS_Store
